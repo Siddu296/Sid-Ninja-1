@@ -1,0 +1,32 @@
+// position of the ball
+var x = 20;
+var xPos = 300;
+var yPos = 107;
+var ballSpeed = 30;
+strokeWeight(7);
+// how far the ball moves every time
+var speed = 5;
+
+draw = function() {
+    background(151, 3, 250);
+    
+    fill(66, 66, 66);
+    ellipse(x, 200, 50, 50);
+    
+    if (x > mouseX - 30) {
+        speed = -5;
+    }
+    if (x < 25) {
+        speed = 5;
+    }
+
+    // move the ball
+    x = x + speed;
+
+fill(255, 3, 3);
+rect(mouseX, yPos, 40, 200, 20);
+
+
+
+
+};
